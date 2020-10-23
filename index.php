@@ -15,6 +15,10 @@
            background-color: #343434;
            color: seashell;
            margin: 0;
+
+           display: flex;
+           justify-content: space-evenly;
+           flex-wrap: wrap;
         }
 
         div{
@@ -22,6 +26,11 @@
             width: 200px;
 
             border: 1px solid black;
+            background-color: #91a9fa;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
             
         }
         a{
