@@ -26,7 +26,7 @@
             width: 200px;
 
             border: 1px solid black;
-            background-color: #91a9fa;
+            background-color: #454399;
 
             display: flex;
             justify-content: flex-start;
