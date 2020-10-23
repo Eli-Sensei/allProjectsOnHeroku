@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{box-sizing: border-box; color: seashell;}
+
+body{
+   font-family: 'Nunito', sans-serif;
+   background-color: #343434;
+   color: seashell;
+   margin: 0;
+
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    box-shadow: purple 0px 25px 13px 0px;
+}
+nav{
+    width: 100%;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+    padding: 0;
+}
+a{
+    color: inherit;
+}
+
+footer {
+    box-shadow: gray 0px -25px 13px 0px;
+    background-color: rgb(51, 37, 37);
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+footer form{
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer form input{
+    color: black;
+}
+
+main{
+    margin: 70px 0;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#titleSearch{
+    width: 100%;
+    padding-left: 50px;
+}
+
+/*/////////// CAROUSEL ///////////*/
+#carouselParent{
+    width: calc(1920px * 0.5);
+    height: calc(1080px * 0.5);
+    
+    position: relative;
+
+    margin: 20px;
+
+}
+#carouselParent button{
+    background-color: transparent;
+    font-size: 150%;
+    width: 5%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+    
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+#carouselParent button:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#previous{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#next{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#allImageContainer{
+    width: 100%;
+    height: 100%;
+    
+
+    overflow: hidden;
+
+    display: flex;
+}
+#allImageContainer img{
+    background-color: indigo;
+    width: 100%;
+
+    position: relative;
+    left: 0;
+
+    object-fit: cover;
+
+    transition: left ease-out 1s;
+}
+
+/*/////////////// PRODUITS ///////////////////*/
+
+.products{
+    max-width: 500px;
+    min-width: 200px;
+    width: 20vw;
+
+    margin: 10px 0;
+
+    border: rgb(60, 14, 93) solid 2px;
+    border-left: rgb(60, 14, 93) solid 5px;
+    box-shadow: gray 0px 5px 13px 0px;
+}
+.products img{
+    width: 100%;
+
+}
+.products h3{
+   font-size: 4vh;
+   font-weight: normal;
+   margin: 2px;
+}
+.productsDecriptions{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.productsDecriptions p{
+    width: 100%;
+}
+.productsDecriptions small{
+    width: 50%;
+    text-align: center;
+}
+
+/*//////////// Article /////////////////*/
+.article{
+    max-width: 900px;
+    min-width: 300px;
+    width: 30vw;
+
+    border: rgb(60, 14, 93) solid 2px;
+    border-left: rgb(60, 14, 93) solid 5px;
+    box-shadow: gray 0px 5px 13px 0px;
+}
+.article img{
+    width: 100%;
+
+}
+.article h3{
+   font-size: 4vh;
+   font-weight: normal;
+   margin: 2px;
+}
+.articleDecriptions{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.articleDecriptions p{
+    width: 100%;
+}
+.articleDecriptions small{
+    width: 50%;
+    text-align: center;
+
+    user-select: none;
+}

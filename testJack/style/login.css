@@ -1,0 +1,33 @@
+#login{
+    width: 400px;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+#login h1{
+    text-align: center;
+    padding-top: 20px;
+}
+
+#login form{
+    display: flex;
+    flex-direction: column;
+}
+
+#login form input{
+    box-sizing: border-box;
+    width: 70%;
+    font-size: 15px;
+    margin: 0 auto;
+}
+
+#login form input:last-child{
+    margin-top: 15px;
+}
+
+#login p{
+    text-align: center;
+    padding-bottom: 5px;
+}

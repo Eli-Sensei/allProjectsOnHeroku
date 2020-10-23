@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ipfs-js-infura</title>
+    <style media="screen">
+      @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+      
+      *{box-sizing: border-box;}
+      
+      body{
+         font-family: 'Nunito', sans-serif;
+         background-color: #343434;
+
+         color: seashell;
+         margin: 0;
+      }
+      img{
+          border: 1px solid black;
+          width: 400px;
+          height: 300px;
+          object-fit: contain;
+      }
+    </style>
+      <script src="https://cdn.jsdelivr.net/npm/ipfs-http-client@47.0.1/dist/index.min.js"></script>
+</head>
+<body>
+    <form>
+        <input type="file" multiple><br>
+        <input type="submit" id="send" value="Send">
+    </form>
+
+    <main>
+
+    </main>
+
+    <script>
+    // 1 - instancier la classe IpfsHttpClient({host: 'ipfs.infura.io', port: 5001 })
+    const ipfs =  IpfsHttpClient({host: 'ipfs.infura.io', port: 5001 })
+    const ipfsHttpEndpoint = 'https://ipfs.infura.io/ipfs/';
+    const btn_send = document.getElementById('send');
+    const main = document.getElementsByTagName("main")[0];
+    console.log(ipfs);
+
+    /*document.querySelector('input[type=file]').addEventListener("load", console.log);
+
+    function PreviewImage(){
+        var preview = document.querySelector('img');
+        var file    = document.querySelector('input[type=file]').files[0];
+        var reader  = new FileReader();
+
+        reader.addEventListener("load", function () {
+            preview.src = reader.result;
+        }, false);
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }else console.log(file);
+    }*/
+
+
+    async function addFromBuffer (e) {
+        try {
+
+        // retrieve files from input file with querySelector
+        let allFiles = document.querySelector('input[type=file]').files;
+        /*for (const ele of allFiles) {
+            console.log(ele);
+        }*/
+        // si il y a eu au moins 1 fichier
+        if(allFiles.length > 0){
+            // cacher le bouton téléverser
+            btn_send.style.display = "none";
+
+            
+            Array.from(allFiles).forEach(async (element, filesCounter) => {
+                filesCounter++;
+                if (filesCounter === allFiles.length -1) {
+                    btn_send.style.display = "block";
+                }
+                if(element.type.includes("image")){
+                    const ipfsInfo = await ipfs.add(element);
+                    console.log(ipfsInfo);
+                    console.log(element);
+                    main.innerHTML += `<a href="${ipfsHttpEndpoint+ipfsInfo.path}" target="_blank"> <img src="${ipfsHttpEndpoint+ipfsInfo.path}"> </a>`;
+                    
+                }
+                
+            });
+            // effacer le contenu de la div des messages d'info
+                // bloc try
+                    // ajouter le buffer sur ipfs avec la fonction add en passant DIRECTEMENT le file
+                    // récuperer le hash crypto ipfs avec la propriété path
+                    // afficher un lien clickable qui est la concatenation du endpoint ipfs http et du hash crypto renvoyé par infura
+            // reafficher le bouton téléverser
+                // bloc catch
+                    //gestion erreur
+        }
+        } catch(e){
+            console.warn(e);
+        }
+                    
+    }
+        document.querySelector('form').addEventListener('submit', (e)=>{
+            e.preventDefault();
+            addFromBuffer();
+        });
+    </script>
+  </body>
+</html>

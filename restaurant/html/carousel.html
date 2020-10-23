@@ -1,0 +1,42 @@
+<div id="carouselParent">
+    <button id="previous">&ltcir;</button>
+    <div id="allImageContainer">
+        <!-- images -->
+        <img class="imagesContainer" src="../image/LastImageCarousel/Crottin-chevre-pyrenees.jpg" alt="">
+        <img class="imagesContainer" src="../image/LastImageCarousel/fromage_portugais.jpg" alt="">
+        <img class="imagesContainer" src="../image/LastImageCarousel/legumes.jpg" alt="">
+        <img class="imagesContainer" src="../image/LastImageCarousel/pommes_de_terre.jpg" alt="">
+    </div>
+    <button id="next">&gtcir;</button>
+</div>
+<script>
+    const carouselParent = document.getElementById("carouselParent");
+    const allImageContainer = document.getElementById("allImageContainer");
+    const allImages = document.getElementsByClassName("imagesContainer");
+    const btn_previous = document.getElementById("previous");
+    const btn_next = document.getElementById("next");
+
+    let leftChangementValue = 960;
+    let leftChangement = 0;
+    function NextImage() {
+        leftChangement -= leftChangementValue;
+        if (leftChangement < -2880) {
+            leftChangement = 0;
+        }
+        for (const image of allImages) {
+            image.style.left = `${leftChangement}px`
+        }
+    }
+    function PreviousImage() {
+        leftChangement += leftChangementValue;
+        if (leftChangement > 0) {
+            leftChangement = -2880;
+        }
+        for (const image of allImages) {
+            image.style.left = `${leftChangement}px`
+        }
+    }
+    //960 540
+    btn_next.addEventListener("click", NextImage);
+    btn_previous.addEventListener("click", PreviousImage);
+</script>

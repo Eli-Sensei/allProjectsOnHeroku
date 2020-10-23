@@ -1,0 +1,14 @@
+footer{
+    height: 150px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    border-top: 10px solid var(--accent-color);
+}
+
+footer p{
+    color: white;
+    margin-right: 15px;
+    align-self: flex-end;
+}

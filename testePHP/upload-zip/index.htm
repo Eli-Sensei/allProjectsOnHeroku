@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Upload zip & resample images</title>
+      <style>
+        body{background-color: gray;}
+        img{
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            padding: 4px;
+            margin: 10px;
+            max-height: 150px;
+            max-height: 150px;
+        }
+        a{
+          text-decoration: none;
+          color: cornflowerblue;
+        }
+      </style>
+    <script type="text/javascript">
+      function uploadZip(triggerLink) {
+        console.clear();
+        triggerLink.style.display = 'none';
+        document.querySelector('#message').innerHTML = 'wait...';
+        const headers = { method: 'POST', body: new FormData(document.querySelector('#the_form')) };
+
+        fetch('uploadZip.php', headers).then(r => {
+            console.log(r.headers.get('content-type'));
+            /*
+            uncomment this line if you need to force response TEXT
+            return r.text();
+            */
+            return r.headers.get('content-type').includes('json') ? r.json() : r.text()
+        }).then(r => {
+          console.log(r);
+          // display the images here
+          triggerLink.style.display = 'block';
+      }).catch(e => {
+          console.warn(e);
+          triggerLink.style.display = 'block';
+      });
+      }
+    </script>
+  </head>
+  <body>
+  <h1>Upload zip & resample images</h1>
+    <form id="the_form" enctype="multipart/form-data" method="post">
+      <input type="file" name="the_file" />
+    </form>
+    <p>
+      <a href="#" onclick="uploadZip(this);">UPLOAD</a>
+    </p>
+    <p id="message"></p>
+  </body>
+</html>

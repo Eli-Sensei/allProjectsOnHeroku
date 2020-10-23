@@ -1,0 +1,41 @@
+#articles-modif{
+    background-color: var(--secondary-color);
+    border-radius: 10px 10px;
+}
+
+#articles-modif ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+#articles-modif ul li:first-child{
+    margin-left: 0;
+}
+
+#articles-modif ul li{
+    margin-left: 15px;
+}
+
+#delete_articles{
+    background-color: var(--accent-color);
+}
+
+textarea{
+    resize: none;
+}
+
+.crt_article form{
+    display: flex;
+    flex-direction: column;
+}
+
+.crt_article form label{
+    margin-top: 15px;
+}
+
+.crt_article form textarea{
+    width: 350px;
+    height: 100px;
+}
