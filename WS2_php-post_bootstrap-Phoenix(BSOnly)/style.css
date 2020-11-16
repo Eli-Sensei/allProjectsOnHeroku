@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{box-sizing: border-box;}
+
+body{
+   font-family: 'Nunito', sans-serif;
+   background-color: #343434;
+   color: seashell;
+   margin: 0;
+}
+
+header{
+    height: 10vh;
+}
+
+.carousel-item{
+    height: 50%;
+}
+
+.bg-light{
+    background-color: transparent !important;
+}
+
+.container-fluid{
+    height: 50vh;
+}
+
+.carousel-inner{
+    height: inherit;
+}
+#carouselExampleControls{
+    height: inherit;
+}
