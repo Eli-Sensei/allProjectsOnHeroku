@@ -4,13 +4,29 @@
 
 body{
    font-family: 'Nunito', sans-serif;
-   background-color: #343434;
+  
    color: seashell;
    margin: 0;
 }
 
 header{
     height: 10vh;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+}
+nav img{
+    width: 50px;
+    object-fit: contain;
+}
+
+.carousel-container{
+    height: 70vh;
 }
 
 .carousel-item{
@@ -22,7 +38,7 @@ header{
 }
 
 .container-fluid{
-    height: 50vh;
+    padding: 0;
 }
 
 .carousel-inner{
@@ -30,4 +46,42 @@ header{
 }
 #carouselExampleControls{
     height: inherit;
+}
+.container-fluid img{
+    object-fit: contain;
+}
+
+.button-sejour{
+    height: 23vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff !important;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+
+    height: 7vh;
+    width: 100%;
+    background-color: #17a2b8;
+}
+
+footer > div > div > div{
+    height: 7vh;
+}
+
+footer .footer{
+    font-size: 10px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row{
+    margin: 0 !important;
 }
