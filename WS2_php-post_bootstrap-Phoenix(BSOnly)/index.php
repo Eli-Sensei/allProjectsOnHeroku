@@ -19,10 +19,9 @@ if(count($_GET) > 0){
         }
     }else{
         require_once './accueil.html';
-        
     }
 }else{
-    require_once './acceuil.html';
+    require_once './accueil.html';
 }
 
 

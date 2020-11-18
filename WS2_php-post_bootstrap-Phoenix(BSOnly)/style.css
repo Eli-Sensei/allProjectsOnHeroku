@@ -4,8 +4,7 @@
 
 body{
    font-family: 'Nunito', sans-serif;
-  
-   color: seashell;
+  background-color: white;
    margin: 0;
 }
 
@@ -61,8 +60,6 @@ nav img{
 }
 
 footer{
-    position: absolute;
-    bottom: 0;
 
     height: 7vh;
     width: 100%;
@@ -71,10 +68,7 @@ footer{
 
 footer > div > div > div{
     height: 7vh;
-}
-
-footer .footer{
-    font-size: 10px;
+    font-size: 12px;    
 }
 
 .flex{
@@ -82,6 +76,27 @@ footer .footer{
     justify-content: center;
     align-items: center;
 }
+.flex-between{
+    justify-content: space-between;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
 .row{
     margin: 0 !important;
+}
+.no-margin{
+    margin: 0 unset !important;
+    padding-left: 0;
+    padding-right: 0;
+}
+.card-footer{
+    background-color: #60d5e759;
+}
+.card-padding-footer{
+    padding: 0;
+    padding-top: 15px;
+}
+.card-padding-footer h5{
+    padding-left: 10px;
 }

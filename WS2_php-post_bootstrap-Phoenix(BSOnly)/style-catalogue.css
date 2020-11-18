@@ -1,0 +1,40 @@
+header{
+    position: unset;
+    top: unset;
+    background-color: #17a2b8;
+}
+.carousel-container{
+    height: 40vh;
+    margin-bottom: 5vh;
+}
+
+.carousel-item{
+    height: 50%;
+}
+
+.bg-light{
+    background-color: transparent !important;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+.carousel-inner{
+    height: inherit;
+}
+#carouselExampleControls{
+    height: inherit;
+}
+.container-fluid img{
+    object-fit: cover;
+}
+
+main{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.card-container{
+    padding: 0;
+}
