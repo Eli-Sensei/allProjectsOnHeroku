@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{box-sizing: border-box;}
+
+body{
+   font-family: 'Nunito', sans-serif;
+  background-color: white;
+   margin: 0;
+}
+
+header{
+    height: 10vh;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+}
+nav img{
+    width: 50px;
+    object-fit: contain;
+}
+
+.carousel-container{
+    height: 70vh;
+}
+
+.carousel-item{
+    height: 50%;
+}
+
+.bg-light{
+    background-color: transparent !important;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+.carousel-inner{
+    height: inherit;
+}
+#carouselExampleControls{
+    height: inherit;
+}
+.container-fluid img{
+    object-fit: contain;
+}
+
+.button-sejour{
+    height: 23vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff !important;
+}
+
+footer{
+
+    height: 7vh;
+    width: 100%;
+    background-color: #75c9c8;
+}
+
+footer > div > div > div{
+    height: 7vh;
+    font-size: 12px;    
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-between{
+    justify-content: space-between;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.row{
+    margin: 0 !important;
+}
+.no-margin{
+    margin: 0 unset !important;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.card-footer{
+    background-color: #d1ecf1;
+}
+.card-padding-footer{
+    padding: 0;
+    padding-top: 15px;
+}
+.card-padding-footer h5{
+    padding-left: 10px;
+}

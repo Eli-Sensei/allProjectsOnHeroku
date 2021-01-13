@@ -1,0 +1,34 @@
+
+    
+
+            <main>
+
+              <div class="container-fluid carousel-container">
+                  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="./assets/img/caraibes1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="./assets/img/maldives_fino.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="./assets/img/maldives_kani.jpg" class="d-block w-100" alt="...">
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+              </div>
+  
+              <div class="container button-sejour" style="background-color: #fff;">
+                <a href="?page=catalogue" class="col-12"><button type="button" class="btn btn-outline-info col-12">Choisir mon séjour tout de suite !</button></a>
+              </div>
+            </main>
+

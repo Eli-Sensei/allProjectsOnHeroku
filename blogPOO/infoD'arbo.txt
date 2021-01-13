@@ -1,0 +1,21 @@
+app:
+Controller et Model principal
+"Les moules"
+
+controllers:
+Font les liens entres mes models et mes vues
+
+models:
+En gros c'est les tables / les entités
+la table en bdd
+
+vues:
+Affichage des info envoyé par les controllers
+
+.htaccess:
+regles de réecriture
+
+index.php:
+le rooter / le point d'entré de l'application
+
+
